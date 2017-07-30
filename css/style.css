@@ -1,0 +1,101 @@
+html, body {
+    height: 92vh;
+}
+
+.main {
+    background-color: black;
+    color: white;
+    background-image: url("../img/chess.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+.games {
+    background-color: #1b1b1b;
+    color: white;
+    margin-top: 30px;
+}
+
+#first {
+    height: 20vh;
+    margin: 0;
+}
+
+#players-form {
+    color: black;
+    margin: 10px;
+}
+
+.games-section {
+    color: #686868;
+}
+
+.admin-photo {
+    height: 140px;
+    width: 140px;
+}
+
+.color-dark-gray {
+    color: #121212;
+}
+
+.color-dark-gold {
+    color: goldenrod;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.footer, .push {
+    height: 1em;
+    margin-left: 20px;
+}
+
+.arrow-btn {
+    margin: 10px;
+}
+
+a:link {
+    color: goldenrod;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-black {
+    color: black;
+}
+
+
+.coin-size {
+    margin: 5px;
+    width: 70px;
+    height: auto;
+}
+
+
+.big-gold-coin {
+    height: 150px;
+    width: 150px;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+}
