@@ -1,0 +1,60 @@
+<div ng-init="flag = true; player2Name = 'Player 2'; checkboxModel = false;">
+    <div id="first">
+        <h3 class="text-center animated bounceInDown">Game Theory</h3>
+    </div>
+    <div class="container">
+        <div class="row animated fadeIn" ng-hide="!flag">
+            <div class="col-md-2 col-md-offset-2 text-center">
+                <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle-thin fa-stack-2x color-dark-gray"></i>
+                    <i class="fa fa-trophy fa-stack-1x color-dark-gold"></i>
+                </span>
+                <br>
+            </div>
+            <div class="col-md-6">
+                <h4>Hi!</h4>
+                <p>
+                    Welcome to <b style="color: wheat;">Game Theory</b> website.<br>
+                    The website is built for MATH 339 fiinal project under supervision of Mr. Andrew McEachern.<br>
+                    Press next, enter your name and next again to start playing cool games!
+                </p>
+                <br>
+            </div>
+        </div>
+        
+        <div class="row text-center animated fadeIn" id="players-form" ng-hide="flag">
+            <div class="col-md-2 col-md-offset-3 tile">
+                <h6>Player 1</h6>
+                <span class="fa-stack fa-lg fa-3x">
+                    <i class="fa fa-circle fa-stack-2x color-dark-gold"></i>
+                    <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                </span>
+                <input type="text" class="form-control"  ng-model="name1" placeholder="Name" aria-describedby="user1" required="">
+            </div>
+            <div class="col-md-2"><h1 style="color: white;">VS</h1></div>
+            <div class="col-md-2 tile">
+                <h6 ng-hide="checkboxModel">{{player2Name}}</h6>
+                <h6 ng-hide="!checkboxModel">Computer</h6>
+                <span class="fa-stack fa-lg fa-3x">
+                    <i class="fa fa-circle fa-stack-2x color-dark-gold"></i>
+                    <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                </span>
+                
+                <input ng-disabled="checkboxModel" type="text" class="form-control"  ng-model="name2" placeholder="Name" aria-describedby="user2" required="">
+
+                <label class="checkbox text-left" for="checkbox1">
+                    <input type="checkbox" value="" ng-model="checkboxModel" id="checkbox1" data-toggle="checkbox" class="custom-checkbox">
+                    <span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                    Play Against AI!
+                </label>
+
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <a class="fa fa-chevron-circle-left fa-3x color-dark-gold arrow-btn" ng-click="flag = true;"></a>
+            <a class="fa fa-chevron-circle-right fa-3x color-dark-gold arrow-btn" ng-hide="!flag" ng-click="flag = false;"></a>
+            <a class="fa fa-chevron-circle-right fa-3x color-dark-gold arrow-btn" ng-hide="flag" ng-click="changeTemplate('games'); setName(name1, name2); changeTurn(); changeChompTurn(); changeNimTurn(); chompAICheckedF(checkboxModel);"></a>
+            <br>
+        </div>
+    </div>
+</div>

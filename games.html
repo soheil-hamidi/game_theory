@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row text-center">
+        <i class="fa fa-trophy fa-5x color-dark-gold animated tada"></i>
+        <h3 class="animated fadeIn">Games</h3>
+        <h4 class="animated fadeIn">{{player1}} <i class="color-dark-gold">vs</i> {{player2}}</h4>
+        <br>
+    </div>
+</div>
+
+
+<div class="container animated fadeIn games-section">
+    <div class="col-lg-4">
+        <div class="tile">
+            <img src="img/candies.png" alt="Choclate" class="tile-image big-illustration">
+            <h3 class="tile-title">Nim</h3>
+            <p class="text-left">
+                <br>
+                Nim is played starting with rows of candies!<br> 
+                Players take turns taking any number of candies from one of the piles.<br> 
+                Whoever takes the last of the objects wins!
+                <br>
+                <br>
+            </p>
+            <button class="btn btn-primary btn-large" ng-click="changeGame('nim')">Play</button>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="tile">
+            <img src="img/chocolate.png" alt="Choclate" class="tile-image big-illustration">
+            <h3 class="tile-title">Chomp</h3>
+            <p class="text-left">
+                <br>
+                Chomp is played starting with chocolate bar!<br>
+                Players take turns chomping a square out of the chocolate bar
+                along with any squares to the right and above.<br>
+                Whoever takes the lower left square loses!
+            </p>
+            <button class="btn btn-primary btn-large" ng-click="changeGame('chomp')">Play</button>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="tile">
+            <img src="img/coins.png" alt="Choclate" class="tile-image big-illustration">
+            <h3 class="tile-title">Take Away</h3>
+            <p class="text-left">
+                <br>
+                Take Away is played starting with coins!<br>
+                Players take turns taking one, two or three silver coins at a time.<br>
+                Whoever takes the last gold coin wins!<br><br>
+            </p>
+            <button class="btn btn-primary btn-large" ng-click="changeGame('takeAway')">Play</button>
+        </div>
+    </div>
+</div>
+
+<div class="container animated fadeIn games-section" ng-include="gameName + '.html'"></div>
+
+<br>
+<div class="col-lg-12 animated fadeInUp">
+    <button type="button" class="btn btn-danger center-block" ng-click="changeTemplate('main'); restartTakeAway(); restartChomp(); restartNim(); changeGame('')">
+        Home
+    </button>
+    <br>
+</div>
